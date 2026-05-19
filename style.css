@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'Barlow';
+    src: url('Barlow.woff2') format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    background-color: #EFF6FF;
+    color: #2A4A5C;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.main {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+}
+
+.left {
+    width: 55%;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 4%;
+    left: 5%;
+    width: 20%;
+    height: 3%;
+}
+
+.right {
+    width: 45%;
+    padding: 8% 4%;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #7B8A92;
+    margin-bottom: 2%;
+}
+
+.paragraph {
+    font-size: 1.2rem;
+    color: #96A5B1;
+    margin-bottom: 8%;
+    line-height: 1.5;
+}
+
+.social {
+    display: flex;
+    gap: 4%;
+    margin-bottom: 8%;
+}
+
+.social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 6%;
+    padding: 3% 2%;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 500;
+    position: relative;
+    transition: 0.2s;
+}
+
+.social-btn:hover {
+    opacity: 0.9;
+}
+
+.social-btn img {
+    width: 1rem;
+    height: 1rem;
+    }
+
+.Facebook {
+    background-color: #255A9B;
+}
+
+.LinkedIn {
+    background-color: #0076B6;
+}
+
+.divider {
+    position: relative;
+    text-align: center;
+    margin-bottom: 8%;
+    font-size: 0.8rem;
+    color: #96A5B1;
+}
+
+.divider span {
+    background-color: #FFFFFF;
+    padding: 0 3%;
+    position: relative;
+    z-index: 1;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 50%;
+    height: 1px;
+    background-color: #EEEEEE;
+}
+
+.input-row {
+    display: flex;
+    gap: 4%;
+    margin-bottom: 8%;
+}
+
+.input-box {
+    flex: 1;
+    border: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+}
+
+.input-box:focus-within {
+    border-left: 3px solid #3698FB;
+}
+
+.input-box label {
+    display: block;
+    padding: 4% 6% 0;
+    font-size: 0.8rem;
+    color: #96A5B1;
+}
+
+.input-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 2% 6% 5%;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #2A4A5C;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #7B8A92;
+    margin-bottom: 2%;
+}
+
+.text {
+    font-size: 0.8rem;
+    color: #96A5B1;
+    margin-bottom: 5%;
+    line-height: 1.5;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4%;
+    margin-bottom: 25%;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    font-size: 0.9rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.radio-item input[type="radio"] {
+    accent-color: #3698FB;
+}
+
+.info {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #EEEEEE;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    color: #96A5B1;
+    cursor: help;
+}
+
+.tooltip {
+    position: absolute;
+    top: 180%;
+    left: 50%;
+    width: 16rem;
+    padding: 6%;
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #96A5B1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    z-index: 10;
+}
+
+.info:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2%;
+    margin-bottom: 7%;
+    font-size: 0.8rem;
+    color: #96A5B1;
+    line-height: 1.5;
+}
+
+.checkbox-item input[type="checkbox"] {
+    accent-color: #3698FB;
+    margin-top: 0.2rem;
+}
+
+.checkbox-item a {
+    color: #3698FB;
+    text-decoration: none;
+}
+
+.checkbox-item a:hover {
+    text-decoration: underline;
+}
+
+.submit {
+    width: 50%;
+    padding: 2% 6%;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #3698FB;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    opacity: 0.95;
+}

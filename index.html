@@ -1,167 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout task</title>
+    <title>Web Core 6.8</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-    <div class="main">
 
-        <div class="left">
-
-            <img class="logo" src="assets/images/logo.svg" alt="Logo">
-            
+    <header class="header">
+        <div class="header__left">
+            <button type="button" class="btn btn--type--burger">
+                <img src="assets/images/burger.svg" alt="menu">
+            </button>
+            <div class="header__divider header__divider--side--left"></div>
+            <img class="header__logo" src="assets/images/Group.svg" alt="logo">
         </div>
 
-        <div class="right">
+        <div class="header__title-wrapper">
+            <div class="header__highlight"></div>
+            <h1 class="header__title">Услуги и сервисы</h1>
+        </div>
 
-            <h1>Get iintoo it today</h1>
+        <div class="header__right">
+            <button type="button" class="btn btn--view--tablet-only">
+                <img src="assets/images/call.svg" alt="call">
+            </button>
+            <button type="button" class="btn btn--view--tablet-only">
+                <img src="assets/images/chat.svg" alt="chat">
+            </button>
+            <button type="button" class="btn btn--view--tablet-only">
+                <img src="assets/images/profile.svg" alt="profile">
+            </button>
+            <div class="header__divider header__divider--side--right"></div>
+            <button type="button" class="btn btn--type--repair">
+                <span class="btn__text btn__text--type--repair">Оставить заявку</span>
+                <img src="assets/images/repair.svg" alt="repair" class="btn_img btn__img--type--repair">
+            </button>
+            <button type="button" class="btn btn--type--checkstatus">
+                <span class="btn__text btn__text--type--checkstatus">Статус ремонта</span>
+                <img src="assets/images/checkstatus.svg" alt="checkstatus" class="btn__img btn__img--type--checkstatus">
+            </button>
+        </div>
+    </header>
 
-            <p class="paragraph">
-                There is no charge or obligation upon registration.
-            </p>
+    <main class="main-content">
+        <div class="slide-menu">
+            <button type="button" class="slide-menu__button slide-menu__button--state--active">Ремонтируемые устройства</button>
+            <button type="button" class="slide-menu__button">Дополнительные услуги</button>
+            <button type="button" class="slide-menu__button">Цены на услуги</button>
+            <button type="button" class="slide-menu__button">Адреса сервисных центров</button>
+            <button type="button" class="slide-menu__button">Специальные цены</button>
+            <button type="button" class="slide-menu__button">Отзывы</button>
+        </div>
 
-            <div class="social">
+        <div class="info-container">
 
-                <button type="button" class="social-btn facebook">
-                    <img src="assets/images/facebook.svg" alt="Facebook">
-                    <span>Register with Facebook</span>
-                </button>
-
-                <button type="button" class="social-btn linkedIn">
-                    <img src="assets/images/linkedin.svg" alt="LinkedIn">
-                    <span>Register with LinkedIn</span>
-                </button>
-
-            </div>
-
-            <div class="divider">
-                <span>OR</span>
-            </div>
-
-            <form class="form">
-
-                <div class="input-row">
-
-                    <div class="input-box">
-                        <label for="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="gus.goodwin@gmail.com"
-                            required>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="phone">Phone</label>
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone">
-                    </div>
-
-                </div>
-
-                <h2>What type of investor are you?</h2>
-
-                <p class="text">
-                    Select the type of investor you are below.
+            <div class="info-container__left">
+                <p class="info-container__paragraph info-container__paragraph--size--first">
+                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+                    отремонтировать свой ноутбук Dell с официальной гарантией производителя.
                 </p>
-
-                <div class="radio-group">
-
-                    <label class="radio-item">
-                        <input
-                            type="radio"
-                            name="investor"
-                            value="individual"
-                            checked
-                        >
-                        <span>Individual</span>
-
-                        <span class="info">
-                            i
-                            <span class="tooltip">
-                                I am a natural person investing on my own behalf
-                                as a sole owner, joint tenant, or tenant in common.
-                            </span>
-                        </span>
-                    </label>
-
-                    <label class="radio-item">
-                        <input
-                            type="radio"
-                            name="investor"
-                            value="business"
-                        >
-                        <span>Business</span>
-
-                        <span class="info">
-                            i
-                            <span class="tooltip">
-                                Business.
-                            </span>
-                        </span>
-                    </label>
-
-                    <label class="radio-item">
-                        <input
-                            type="radio"
-                            name="investor"
-                            value="ira"
-                        >
-                        <span>IRA</span>
-
-                        <span class="info">
-                            i
-                            <span class="tooltip">
-                                IRA.
-                            </span>
-                        </span>
-                    </label>
-
-                    <label class="radio-item">
-                        <input
-                            type="radio"
-                            name="investor"
-                            value="trust"
-                        >
-                        <span>Trust</span>
-
-                        <span class="info">
-                            i
-                            <span class="tooltip">
-                                Trust.
-                            </span>
-                        </span>
-                    </label>
-
-                </div>
-
-                <label class="checkbox-item">
-                    <input
-                        type="checkbox"
-                        required
-                    >
-                    <span>
-                        I agree to the terms and receiving notifications from iintoo
-                        <a href="#">View full terms</a>
+                <br>
+                <p class="info-container__paragraph info-container__paragraph--size--second">
+                    <span class="info-container__text-part info-container__text-part--visible--tablet">
+                        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
                     </span>
-                </label>
-
-                <button type="submit" class="submit">
-                    Create Account
+                    <span class="info-container__text-part info-container__text-part--visible--desktop">
+                        , что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются
+                        по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                    </span>
+                </p>
+                <button type="button" class="btn-readmore">
+                    <img src="assets/images/expand.svg" alt="">
+                    <span class="btn-readmore__text">Читать далее</span>
                 </button>
+            </div>
 
-            </form>
+            <div class="info-container__right">
+                <img class="info-container__photo" src="assets/images/Picture Copy.png" alt="Lobby photo">
+            </div>
 
         </div>
-
-    </div>
-    
+    </main>
 </body>
 </html>
